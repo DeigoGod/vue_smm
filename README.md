@@ -22,7 +22,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 # 参考原型
 
 ```
-
-没得比[] http://m.vancl.com/
+https://w.haiziwang.com/  孩子王
 
 ```
