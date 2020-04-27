@@ -8,13 +8,15 @@ let data = [
 				id: 5017892,
 				imageUrl: "https://hzwimspic-1251601690.image.myqcloud.com/7d3a60f2-5926-4281-bf26-758a244e872c",
 				name: "贝亲",
-				searchUrl: "https://w.cekid.com/shop/shop.html?storeid=2828&shopid=3",
+				linkpath: "123",
+				type : "product"
 			},
 			{
 				id: 5016637,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/cc48b79a-fede-4b8e-9448-9807ec080518",
 				name: "尤妮佳",
-				searchUrl: "https://search.cekid.com/html?metaattrs=55_4615&cmd=kwsearch",
+				linkpath: "124",
+				type : "product"
 			}
 			
 		]
@@ -28,13 +30,15 @@ let data = [
 				id: 5015857,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/48c99309-bae0-4fdc-ac0a-e0b2a53a7a85",
 				name: "贝壳元素",
-				searchUrl: "https://so.cekid.com/result/product?metaattrs=55_5724&cmd=kwsearch",
+				linkpath: "125",
+				type : "product"
 			},
 			{
 				id: 5016461,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/9cfc6ba3-21a9-4519-a966-21f9c2927ad2",
 				name: "齐齐熊",
-				searchUrl: "https://search.cekid.com/html?metaattrs=55_5498&cmd=kwsearch",
+				linkpath: "126",
+				type : "product"
 			}
 			
 		]
@@ -48,13 +52,15 @@ let data = [
 				id: 5015565,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/9ad521e8-27a6-425e-a529-a90bed855a53",
 				name: "花王",
-				searchUrl: "https://search.cekid.com/html?searchpath=5009785_5009791&metaattrs=55_4661&cmd=kwsearch",
+				linkpath: "127",
+				type : "product"
 			},
 			{
 				id: 5015561,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/066b06de-43a2-45fe-aefb-08a5aa11df8c",
 				name: "贝拉米",
-				searchUrl: "https://search.cekid.com/html?searchpath=5015553_5015555_5015561&metaattrs=55_4644&cmd=kwsearch",
+				linkpath: "128",
+				type : "product"
 			}
 			
 		]
@@ -69,13 +75,15 @@ let data = [
 				id: 5017892,
 				imageUrl: "https://hzwimspic-1251601690.image.myqcloud.com/7d3a60f2-5926-4281-bf26-758a244e872c",
 				name: "贝亲",
-				searchUrl: "https://w.cekid.com/shop/shop.html?storeid=2828&shopid=3",
+				linkpath: "123",
+				type : "product"
 			},
 			{
 				id: 5016637,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/cc48b79a-fede-4b8e-9448-9807ec080518",
 				name: "尤妮佳",
-				searchUrl: "https://search.cekid.com/html?metaattrs=55_4615&cmd=kwsearch",
+				linkpath: "124",
+				type : "product"
 			}
 			
 		]
@@ -90,13 +98,15 @@ let data = [
 				id: 5017892,
 				imageUrl: "https://hzwimspic-1251601690.image.myqcloud.com/7d3a60f2-5926-4281-bf26-758a244e872c",
 				name: "贝亲",
-				searchUrl: "https://w.cekid.com/shop/shop.html?storeid=2828&shopid=3",
+				linkpath: "123",
+				type : "product"
 			},
 			{
 				id: 5016637,
 				imageUrl: "http://pmspic-10004025.image.myqcloud.com/cc48b79a-fede-4b8e-9448-9807ec080518",
 				name: "尤妮佳",
-				searchUrl: "https://search.cekid.com/html?metaattrs=55_4615&cmd=kwsearch",
+				linkpath: "124",
+				type : "product"
 			}
 			
 		]

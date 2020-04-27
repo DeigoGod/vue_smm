@@ -5,14 +5,14 @@ import Home from '../views/Home.vue'
 import Cart from '../views/Cart.vue'
 import Detail from '../views/Detail.vue'
 import Category from '../views/Category.vue'
-import Mine from '../views/Mine.vue'
+import Me from '../views/Me.vue'
 import Regist from '../views/Regist.vue'
 import Search from '../views/Search.vue'
 import Login from '../views/Login.vue'
 import SearchEnd from '../views/SearchEnd.vue'
 
 
-
+import jsCookie from 'js-cookie';
 
 
 
@@ -31,6 +31,9 @@ Vue.use(VueRouter)
     path: '/cart',
     name: 'Cart',
     component: Cart,
+	meta : {
+		auth : true
+	}
 	
   },
   {
@@ -53,8 +56,11 @@ Vue.use(VueRouter)
   },
   {
     path: '/mine',
-    name: 'Mine',
-    component: Mine,
+    name: 'Me',
+    component: Me,
+	meta : {
+		auth : true
+	}
 	
   },
   {
@@ -92,25 +98,19 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
-  // scrollBehavior : function(t,f,seaveposition) {
-	 //  return {
-		//   x : 0,
-		//   y : 0
-	 //  }
-  // }
 })
 
 //导航守卫 全局导航守卫  t : to到哪里了，f : from来自那里， next : 下一此跳转
-// router.beforeEach( (t,f,next) => {
-// 	if(t.meta.auth) {
-// 		let logined = jsCookie.get('username');
-// 		if(logined) {
-// 			next();
-// 		}else {
-// 			next('/login?next=' + t.path);
-// 		}
-// 	}else {
-// 		next();
-// 	}
-// })
+router.beforeEach( (t,f,next) => {
+	if(t.meta.auth) {
+		let logined = jsCookie.get('username');
+		if(logined) {
+			next();
+		}else {
+			next('/login?next=' + t.path);
+		}
+	}else {
+		next();
+	}
+})
 export default router

@@ -35,7 +35,7 @@
 					<!-- 以上时Ad 那张图片 -->
 					<div class="baoceng">
 						<div class="neiceng" v-for="(item,i) in data.list" :key="i">
-							<router-link :to="{name : 'Detail',params : {id : item.id}}">
+							<router-link  v-if="item.type == 'product'"  :to="{name : 'Detail',params : {id : item.linkpath}}">
 								<div class="img_box">
 									<img :src="item.imageUrl" alt="">
 									<p>{{item.name}}</p>

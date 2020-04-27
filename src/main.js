@@ -11,6 +11,11 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 Vue.use(Vant);
 
+//注册cookie
+import jsCookie from 'js-cookie';
+Vue.prototype.$cookie = jsCookie;
+
+
 
 //注册api
 import * as api from './api';
