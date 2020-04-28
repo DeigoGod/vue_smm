@@ -113,6 +113,25 @@ export default {
 			  }).catch( err => {
 				  this.$toast("登录失败",err)
 			  })
+		  }else if(this.logintype == 2) {
+			  this.$api.getLoginAPI({
+				  fmdo : "tel",
+				  dopost : "login",
+				  username : this.tel ,
+				  pwd : this.pwd
+			  }).then( res => {
+				  console.log(res);
+				  this.$cookie.set("tel",this.tel,{expires : 7});
+				  this.$cookie.set("token",res.data.token,{expires : 7});
+				  let next = this.$route.query.next;
+					if(next) {
+						this.$router.push(next);
+					}else {
+						this.$router.push("/");
+					}
+			  }).catch( err => {
+					this.$toast("登录失败",err)
+			  })
 		  }
 		  
 	  },

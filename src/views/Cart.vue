@@ -15,11 +15,12 @@
 		<van-card v-if="good.name"
 			v-for="(good,index) in $store.getters.getGoodList" :key="index"
 		  :num="good.num"
-		  :price="good.price"
+		  :price="good.price * good.num"
 		  :desc="good.desc"
 		  :title="good.name"
 		  :thumb="good.img"
 		>
+		
 		  <template #footer>
 			<van-button size="mini"  @click="changeNum(good.id,good.skuid,-1)">-</van-button>
 			<van-button size="mini" @click="changeNum(good.id,good.skuid,+1)">+</van-button>
@@ -27,16 +28,14 @@
 		  </template>
 		</van-card>
 		
+		<!-- 提交订单 开始 -->
+			
+			<div class="order">
+				<van-submit-bar :price="price" button-text="更新金钱" @submit="onSubmit" />
+			</div>
+			
+		<!-- 提交订单 结束 -->
 		
-		<!-- 样例开始 -->
-			<!-- <div class="box_cart" v-else>
-				<van-empty
-				  class="custom-image"
-				  image="https://img.yzcdn.cn/vant/custom-empty-image.png"
-				  description="空空如也"
-				/>
-			</div> -->
-		<!-- 样例结束 -->
   </div>
 </template>
 
@@ -50,7 +49,26 @@ export default {
   components: {
     
   },
+  data() {
+	return {
+		price : 0,
+	}  
+  },
   methods : {
+	  onSubmit() {
+		let money = 0;
+		this.$toast("更新成功");  
+		console.log(this.$store.getters.getGoodList);
+		this.$store.getters.getGoodList.forEach( (val,index) => {
+			if(index > 0) {
+				money += val.num * val.price;
+			}
+		})
+		this.price = money * 100;
+		console.log(money)
+		
+		
+	  },
 	  onClickLeft() {
 		  this.$router.go(-1);
 	  },
@@ -58,6 +76,10 @@ export default {
 		  this.$router.push("/")
 	  },
 	  changeNum( id,skuid,num) {
+		  
+		  
+		  
+		  
 		  this.$store.dispatch("changeNumAsync",{
 				id : id,
 				skuid : skuid,

@@ -38,6 +38,11 @@ export default new Vuex.Store({
 			   state.goodList.push(good);
 		   }
 		},
+		
+		
+		
+		
+		
 		remove(state,good) {
 			  let index = -1;
 			  state.goodList.forEach( (item,i) => {
@@ -59,13 +64,12 @@ export default new Vuex.Store({
 						}else {
 							val.num = 1;
 						}
-						
-					
-						
-					
 				}
 			})
-		}
+		},
+		
+		
+		
 		
   },
   actions: {
@@ -77,7 +81,8 @@ export default new Vuex.Store({
 	  },
 	  changeNumAsync(context,good) {
 		  context.commit("changeNum",good);
-	  }
+	  },
+	 
   },
   modules: {
   }

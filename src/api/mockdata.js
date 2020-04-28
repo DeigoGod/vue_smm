@@ -218,3 +218,17 @@ mock.mock("https://w.cekid.com/kw/regist.php",function() {
 	return res;
 })
 
+
+
+//mock 用户信息
+mock.mock("https://w.cekid.com/kw/userinfo.php",function(req) {
+	console.log(req)
+	let res = {
+		code : 0,
+		data : {
+			tel : "1345678944"
+		},
+		result : "ok",
+	}
+	return res;
+})

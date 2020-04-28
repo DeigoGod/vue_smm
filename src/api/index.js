@@ -34,6 +34,11 @@ let getRegistAPI = (data) => {
 }
 
 
+//用户信息API
+let getUserInfoAPI = () => {
+	return axios.get("/kw/userinfo.php",{})
+}
+
 
 
 
@@ -45,5 +50,6 @@ export {
 	getDetailDataAPI,
 	getSmsAPI,
 	getLoginAPI,
-	getRegistAPI
+	getRegistAPI,
+	getUserInfoAPI,
 }

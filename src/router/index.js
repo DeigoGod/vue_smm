@@ -10,6 +10,7 @@ import Regist from '../views/Regist.vue'
 import Search from '../views/Search.vue'
 import Login from '../views/Login.vue'
 import SearchEnd from '../views/SearchEnd.vue'
+import Set from '../views/Set.vue'
 
 
 import jsCookie from 'js-cookie';
@@ -40,6 +41,12 @@ Vue.use(VueRouter)
     path: '/regist',
     name: 'Regist',
     component: Regist,
+  	
+  },
+  {
+    path: '/set',
+    name: 'Set',
+    component: Set,
   	
   },
   {
@@ -98,6 +105,12 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes,
+  scrollBehavior : function(t,f,seaveposition) {
+  	  return {
+  		  x : 0,
+  		  y : 0
+  	  }
+  }
 })
 
 //导航守卫 全局导航守卫  t : to到哪里了，f : from来自那里， next : 下一此跳转
